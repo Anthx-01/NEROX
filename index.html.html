@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pachamapa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e0f7f3;
+      color: #333;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background: linear-gradient(135deg, #88c057, #5dc4b8);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      text-transform: lowercase;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #58a380;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d9ffd9;
+    }
+
+    .main-section {
+      display: flex;
+      padding: 40px;
+      background-color: white;
+      align-items: center;
+    }
+
+    .main-section img {
+      width: 400px;
+      height: auto;
+      border-radius: 15px;
+      margin-right: 210px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border: 4px solid #6ec2a3;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .main-text {
+      max-width: 700px;
+      text-align: justify;
+      margin-top: 30px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .map-section {
+      padding: 40px;
+      text-align: center;
+      background: linear-gradient(180deg, #d2f0ea, #c0eac9);
+    }
+
+    .map-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .map-section img {
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      border: 4px solid #6ec2a3;
+      border-radius: 10px;
+      animation: floatMap 6s ease-in-out infinite;
+    }
+
+    @keyframes floatMap {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+
+    footer {
+      background-color: #58a380;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* Estilo del modal */
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 80%;
+      text-align: center;
+      font-size: 18px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    #modal h2 {
+      color: #58a380;
+      margin-top: 0;
+    }
+
+    #modal button {
+      margin-top: 20px;
+      background-color: #58a380;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .main-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .main-section img {
+        margin: 0 0 20px 0;
+      }
+
+      .main-text {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pachamapa</h1>
+    <p>cuidamos de la naturaleza y nuestros animalitos</p>
+  </header>
+
+  <nav>
+    <a href="Principal">Principal</a>
+    <a href="fauna de fauna.html">Fauna</a>
+    <a href="floradeflora.html">Flora</a>
+    <a href="#" onclick="openModal()">Gracias</a>    
+  </nav>
+
+  <section class="main-section">
+    <img src="primeraimagen.jpg" alt="Imagen de animales">
+    <div class="main-text">
+      <p>El Ecuador es un país privilegiado por su impresionante diversidad en flora y fauna, una riqueza que se debe en gran parte a su particular división geográfica. Su territorio está compuesto por cuatro regiones naturales: la Costa, la Sierra, la Amazonía y las Islas Galápagos. Cada una de ellas posee un clima distinto, lo que favorece la existencia de variados hábitats y, por lo tanto, una asombrosa variedad de especies.
+
+      En la Costa, el clima tropical y las tierras fértiles dan vida a manglares, bosques secos y playas donde habitan desde aves migratorias hasta reptiles únicos. La Sierra, con sus imponentes cordilleras y valles andinos, ofrece un ambiente frío y templado que alberga especies como el cóndor andino y una gran variedad de plantas medicinales y ornamentales. La Amazonía, con su clima húmedo y cálido, es uno de los ecosistemas más biodiversos del planeta, hogar de miles de especies de aves, mamíferos, insectos y árboles que aún siguen siendo descubiertos. Finalmente, las Islas Galápagos, mundialmente conocidas por su valor ecológico y científico, poseen un ecosistema aislado donde evolucionaron especies endémicas como las tortugas gigantes y los piqueros de patas azules.
+
+      Esta riqueza natural convierte al Ecuador en uno de los países con mayor biodiversidad por kilómetro cuadrado en el mundo. Su variedad de climas y ecosistemas no solo es un regalo para la ciencia y el turismo, sino también una herencia que debemos cuidar y proteger para las futuras generaciones.</p>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Mapa de la región</h2>
+    <img src="mapa.jpg" alt="Mapa de Pachamapa">
+  </section>
+
+  <!-- Modal -->
+  <div id="modal">
+    <div id="modal-content">
+      <h2>Autores</h2>
+      <p>
+        Ariel Vega<br>
+        Anthony Castro<br>
+        Scarleth Pico<br>
+        Genesis Añazco<br>
+        Wendy Guaicha<br>
+        Carla Zambrano<br>
+        Belkys Granja
+      </p>
+      <button onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Script para el modal -->
+  <script>
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Pachamapa. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

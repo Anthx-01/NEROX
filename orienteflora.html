@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conceptos - Pachamapa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e0f7f3;
+      color: #333;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background: linear-gradient(135deg, #88c057, #5dc4b8);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      text-transform: lowercase;
+    }
+
+    nav {
+      background-color: #58a380;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d9ffd9;
+    }
+
+    footer {
+      background-color: #58a380;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .concept-section {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 20px;
+      background-color: white;
+    }
+
+    .concept-box {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 800px;
+      overflow: hidden;
+      animation: fadeInBox 0.8s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .left-align {
+      align-self: flex-start;
+    }
+
+    .right-align {
+      align-self: flex-end;
+    }
+
+    .concept-box:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .concept-box:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @keyframes fadeInBox {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .concept-box img {
+      width: 280px;
+      height: 180px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .concept-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .concept-content h4 {
+      color: #58a380;
+      font-size: 22px;
+      margin: 0 0 10px;
+    }
+
+    .concept-content p {
+      font-size: 16px;
+      color: #555;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .concept-box,
+      .concept-box:nth-child(even),
+      .concept-box:nth-child(odd) {
+        flex-direction: column;
+        align-self: center;
+        text-align: center;
+      }
+
+      .concept-box img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>En Pachamapa</h1>
+    <p>cuidamos de la naturaleza y nuestros animalitos</p>
+  </header>
+
+  
+  <section class="concept-section">
+    <div class="concept-box left-align">
+      <img src="chambira.jpg" alt="Concepto 1">
+      <div class="concept-content">
+        <h4>Palma de chambira (Astrocaryum chambira)  </h4>
+        <p>
+        <ul> 
+         <li> Hábitat: Bosques tropicales bajos, áreas húmedas.  </li>
+         <li> Sus hojas se usan para hacer artesanías como hamacas y sombreros.  </li>
+         <li> Fuente de fibras naturales.  </li> 
+         </ul>
+         </p>
+      </div>
+    </div>
+    <div class="concept-box right-align">
+      <img src="caucho.jpg" alt="Concepto 2">
+      <div class="concept-content">
+        <h4>	Árbol de caucho (Hevea brasiliensis) </h4>
+        <p> 
+ <ul> 
+         <li> Hábitat: Bosques lluviosos primarios.   </li>
+         <li>	De su savia se extrae el látex para fabricar goma.  </li>
+         <li> 	Fundamental en la economía de la región en el pasado.   </li> 
+         
+         </ul>
+</p>
+      </div>
+    </div>
+    <div class="concept-box left-align">
+      <img src="heli.jpg" alt="Concepto 3">
+      <div class="concept-content">
+        <h4>	Heliconia (Heliconia spp.) </h4>
+        <p> 
+ <ul> 
+         <li> Hábitat: Selvas tropicales húmedas.  </li>
+         <li> 	Plantas con flores coloridas, parecidas a plumas o picos.   </li>
+         <li> 	Polinizadas por colibríes.   </li> 
+       
+         </ul>
+</p>
+      </div>
+    </div>
+    <div class="concept-box right-align">
+      <img src="brome.jpg" alt="Concepto 4">
+      <div class="concept-content">
+        <h4>	Bromelias (Bromeliaceae) </h4>
+        <p> 
+ <ul> 
+         <li> Hábitat: Troncos de árboles, suelos húmedos.   </li>
+         <li>	Plantas epífitas que capturan agua de lluvia.    </li>
+         <li> 	Albergan pequeños ecosistemas (ranas, insectos).   </li> 
+         
+         </ul>
+</p>
+      </div>
+    </div>
+    <div class="concept-box left-align">
+      <img src="palmera.jpg" alt="Concepto 5">
+      <div class="concept-content">
+        <h4>	Palmera de Tagua (Phytelephas aequatorialis) </h4>
+        <p> 
+ <ul> 
+         <li> Hábitat: Selvas húmedas y zonas inundables.   </li>
+         <li> 	De sus semillas se obtiene la "marfil vegetal" usado en botones y artesanías.   </li>
+         <li> 	Alternativa sostenible para reemplazar el marfil animal.  </li> 
+          
+         </ul>
+</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pachamapa. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

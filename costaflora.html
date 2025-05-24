@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conceptos - Pachamapa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e0f7f3;
+      color: #333;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background: linear-gradient(135deg, #88c057, #5dc4b8);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      text-transform: lowercase;
+    }
+
+    nav {
+      background-color: #58a380;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d9ffd9;
+    }
+
+    footer {
+      background-color: #58a380;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .concept-section {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 20px;
+      background-color: white;
+    }
+
+    .concept-box {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 800px;
+      overflow: hidden;
+      animation: fadeInBox 0.8s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .left-align {
+      align-self: flex-start;
+    }
+
+    .right-align {
+      align-self: flex-end;
+    }
+
+    .concept-box:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .concept-box:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @keyframes fadeInBox {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .concept-box img {
+      width: 280px;
+      height: 180px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .concept-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .concept-content h4 {
+      color: #58a380;
+      font-size: 22px;
+      margin: 0 0 10px;
+    }
+
+    .concept-content p {
+      font-size: 16px;
+      color: #555;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .concept-box,
+      .concept-box:nth-child(even),
+      .concept-box:nth-child(odd) {
+        flex-direction: column;
+        align-self: center;
+        text-align: center;
+      }
+
+      .concept-box img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>En Pachamapa</h1>
+    <p>cuidamos de la naturaleza y nuestros animalitos</p>
+  </header>
+
+  
+  <section class="concept-section">
+    <div class="concept-box left-align">
+      <img src="manglarsierra.jpg" alt="Concepto 1">
+      <div class="concept-content">
+        <h4> Manglar rojo (Rhizophora mangle)  </h4>
+        <p>
+        <ul> 
+         <li> Hábitat: Estuarios, ríos costeros y manglares.  </li>
+         <li> 	Raíces aéreas que permiten respirar en suelos inundados.  </li>
+         <li> 	Vital para crías de peces y aves acuáticas.  </li> 
+         </ul>
+         </p>
+      </div>
+    </div>
+    <div class="concept-box right-align">
+      <img src="palosanto.jpg" alt="Concepto 2">
+      <div class="concept-content">
+        <h4>	Palo Santo (Bursera graveolens) </h4>
+        <p>
+<ul> 
+         <li> Hábitat: Bosques secos y semisecos.  </li>
+         <li> 	Su madera aromática se usa en rituales y medicina natural. 	 </li>
+         <li> 	Protegido debido a la sobreexplotación.   </li> 
+         </ul>
+</p>
+      </div>
+    </div>
+    <div class="concept-box left-align">
+      <img src="guayacan.jpg" alt="Concepto 3">
+      <div class="concept-content">
+        <h4>	Guayacán (Tabebuia chrysantha) </h4>
+        <p> 
+<ul> 
+         <li> Hábitat: Bosques secos tropicales.   </li>
+         <li> Árbol famoso por su floración amarilla intensa en época seca.  	 </li>
+         <li> Símbolo de la resiliencia de los ecosistemas secos.	   </li> 
+         </ul>
+</p>
+      </div>
+    </div>
+    <div class="concept-box right-align">
+      <img src="algarrobo.jpg" alt="Concepto 4">
+      <div class="concept-content">
+        <h4>	Algarrobo (Prosopis juliflora) </h4>
+        <p> 
+<ul> 
+         <li> Hábitat: Zonas áridas y semiáridas de la costa.    </li>
+         <li> 	Produce vainas comestibles para fauna local.  	 </li>
+         <li> 	Su sombra es vital para otras especies del bosque seco. 	   </li> 
+         </ul>
+</p>
+      </div>
+    </div>
+    <div class="concept-box left-align">
+      <img src="mangle.jpg" alt="Concepto 5">
+      <div class="concept-content">
+        <h4>	Mangle blanco (Laguncularia racemosa) </h4>
+        <p> 
+<ul> 
+         <li>  Hábitat: Manglares costeros.   </li>
+         <li>  Menos visible que el mangle rojo, pero fundamental en la protección de costas.  </li>
+         <li>  Tolerante a salinidad extrema. 	   </li> 
+         </ul>
+</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pachamapa. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
